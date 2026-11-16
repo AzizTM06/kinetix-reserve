@@ -1,0 +1,14 @@
+[package]
+name = "kinetix_native_beacon"
+version = "0.1.0"
+edition = "2021"
+description = "Native Solana program for on-chain telemetry heartbeat beacons"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "=2.3.0"
+borsh = "1.5"
+borsh-derive = "1.5"
+thiserror = "1.0"

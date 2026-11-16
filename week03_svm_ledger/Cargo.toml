@@ -1,0 +1,10 @@
+[package]
+name = "kinetix_svm_ledger"
+version = "0.1.0"
+edition = "2021"
+description = "SVM settlement and epoch quota ledger simulator in Rust using Borsh"
+
+[dependencies]
+borsh = { version = "1.5", features = ["derive"] }
+borsh-derive = "1.5"
+thiserror = "1.0"

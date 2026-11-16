@@ -1,0 +1,26 @@
+{
+  "name": "kinetix-spl-asset",
+  "version": "1.0.0",
+  "description": "SPL Token initialization, Metaplex metadata, issuance, transfer and ledger inspection",
+  "main": "src/run_pipeline.ts",
+  "scripts": {
+    "start": "ts-node src/run_pipeline.ts",
+    "init-mint": "ts-node src/01_init_mint.ts",
+    "metadata": "ts-node src/02_attach_metadata.ts",
+    "issue": "ts-node src/03_issue_supply.ts",
+    "transfer": "ts-node src/04_dispatch_transfer.ts",
+    "audit": "ts-node src/05_audit_supply.ts"
+  },
+  "dependencies": {
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.2",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.2",
+    "@solana/spl-token": "^0.4.8",
+    "@solana/web3.js": "^1.95.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

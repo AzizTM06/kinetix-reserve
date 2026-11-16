@@ -1,0 +1,30 @@
+{
+  "name": "helius-rpc-lab",
+  "version": "1.0.0",
+  "main": "dist/memo_dispatch.js",
+  "scripts": {
+    "memo": "ts-node src/memo_dispatch.ts",
+    "token-lab": "ts-node src/ktx_token_lab.ts",
+    "build": "tsc"
+  },
+  "keywords": [
+    "solana",
+    "spl-token",
+    "helius",
+    "memo"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@solana/spl-token": "^0.4.14",
+    "@solana/web3.js": "^1.98.4",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/bs58": "^4.0.4",
+    "@types/node": "^22.13.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "description": "Helius Devnet RPC integration: atomic SOL transfer with Memo and SPL token lifecycle"
+}
