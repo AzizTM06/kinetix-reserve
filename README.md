@@ -96,17 +96,22 @@ flowchart TB
 ## Математическая модель
 
 1. **Выпуск квитанций (Неделя 9):**
-   $$\text{Receipts} = \left\lfloor \frac{\text{Amount} \cdot (\text{IssuedReceipts} + 1000)}{\text{ManagedAssets} + 1000} \right\rfloor$$
+
+$$\text{Receipts} = \left\lfloor \frac{\text{Amount} \cdot (\text{IssuedReceipts} + 1000)}{\text{ManagedAssets} + 1000} \right\rfloor$$
 
 2. **Погашение с удержанием комиссии выхода (Неделя 10):**
-   $$\text{GrossAssets} = \left\lfloor \frac{\text{ReceiptsBurned} \cdot (\text{ManagedAssets} + 1000)}{\text{IssuedReceipts} + 1000} \right\rfloor, \quad \text{Fee} = \left\lfloor \frac{\text{GrossAssets} \cdot \text{fee\_bps}}{10000} \right\rfloor$$
-   $$\text{NetAssets} = \text{GrossAssets} - \text{Fee}$$
+
+$$\text{GrossAssets} = \left\lfloor \frac{\text{ReceiptsBurned} \cdot (\text{ManagedAssets} + 1000)}{\text{IssuedReceipts} + 1000} \right\rfloor, \quad \text{Fee} = \left\lfloor \frac{\text{GrossAssets} \cdot \text{FeeBps}}{10000} \right\rfloor$$
+
+$$\text{NetAssets} = \text{GrossAssets} - \text{Fee}$$
 
 3. **Дискретизация цены в Raydium CLMM (Неделя 11):**
-   $$P(i) = 1.0001^i, \quad \text{SqrtPriceX64} = \left\lfloor \sqrt{P} \cdot 2^{64} \right\rfloor$$
+
+$$P(i) = 1.0001^i, \quad \text{SqrtPriceX64} = \left\lfloor \sqrt{P} \cdot 2^{64} \right\rfloor$$
 
 4. **Непостоянные потери при изменении цены $k = P_1 / P_0$ (Неделя 13):**
-   $$IL(k) = \frac{2\sqrt{k}}{1 + k} - 1$$
+
+$$IL(k) = \frac{2\sqrt{k}}{1 + k} - 1$$
 
 ---
 
